@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1>Calcul impots</h1>
+<h3>Formule de calcul</h3>
+
+<form method="POST" action="#">
+    <p>Salaire brut : <input name="salaire" type="text" id="sal"></p>
+</form>
+
+
+<p id="demo"></p>
+
+<script>
+    document.write("<h1>LISTE DES VALEURS</h1>");
+    sal = document.getElementById("sal").value;
+    var total = sal * 23/100;
+    document.write("Résulat : ", total);
+</script>
+</body>
+</html>

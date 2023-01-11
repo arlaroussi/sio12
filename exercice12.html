@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+        <script>
+            var divs = document.getElementsByTagName('div');
+            for (var i = 0, c = divs.length ; i < c ; i++) {
+                alert('Element N° ' + (i + 1) + ' : ' + divs[i]);
+            } 
+        </script>
+    </head>
+<body>
+    <div id="myDiv"><p>Juste un peu de texte<a>et un lien</a></p></div>
+    <script>
+        var div = document.getElementById('myDiv');
+        alert(div); 
+    </script>
+</body>
+</html>
+

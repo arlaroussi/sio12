@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Calcul salaire</title>
+</head>
+<body onload="reset()">
+
+<h1>Calcul salaire</h1>
+<h3>Formule de calcul</h3>
+
+<form method="POST" action="#">
+    <table>
+    <tr>
+        <td>Salaire brut</td>
+        <td><input name="salaire" type="text" id="sal"></td>
+    </tr>
+    <tr>
+        <td>impôt sur revenu</td>
+        <td><input name="impot" type="text" id="impot"></td>
+    </tr>
+    <tr>
+        <td>Assurance</td>
+        <td><input name="assur" type="text" id="assur"></td>
+    </tr>
+    <tr>
+        <td>Pension</td>
+        <td><input name="pension" type="text" id="pension"></td>
+    </tr>
+    <tr>
+        <td>Formation</td>
+        <td><input name="forma" type="checkbox" id="forma"></td>
+    </tr>
+    <tr>
+        <td>Trajet sup à 100 Km</td>
+        <td><input name="trajet" type="checkbox" id="trajet"></td>
+    </tr>
+    <tr>
+        <td>Salaire net</td>
+        <td><input type="text" id="salnet" name="salnet"></td>
+    </tr>
+    <tr>
+        <td><input name="butt" type="button" value="Calculer" id="calc" onclick="calculerSalaire()"></td>
+        <td><input name="butt" type="button" value="Effacer" id="rest" onclick="reset()"></td>
+        
+    </tr>
+</table>
+</form>
+<br /><br />
+
+<script>
+    function calculerSalaire() {
+        //document.write("<h1>Salaire net</h1>");
+
+        var sal = document.getElementById("sal").value;
+        //alert(sal);
+        console.log(sal);
+        var impot = sal * 0.18;
+        document.getElementById("impot").value = impot.toFixed(2);
+        var assur = sal * 0.07;
+        document.getElementById("assur").value = assur.toFixed(2);
+        var pension = sal * 0.05;
+        document.getElementById("pension").value = pension.toFixed(2);
+
+        var forma = document.getElementById("forma").value;
+
+        var total = sal - impot - assur + pension;
+
+    
+        if (document.getElementById("forma").checked) {
+            total += 150;
+        }
+        document.getElementById("salnet").value = total.toFixed(2);
+    }
+    
+
+    function reset() {
+        document.getElementById("sal").value = 0;
+        document.getElementById("impot").value = 0;
+        document.getElementById("assur").value = 0;
+        document.getElementById("pension").value = 0;
+        document.getElementById("salnet").value = 0;
+    }
+</script>
+</body>
+</html>

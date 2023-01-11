@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+<head>
+<script language="javascript">
+function saluer() 
+{ 
+   alert("Bonjour étudiants BUT1 !"); 
+}
+</script>
+</head>
+<body> 
+<H4>Exécution immédiate</H4> 
+<script language="javascript">
+	/* alert("Bonjour tout le monde !");  */
+	/* alert('Message d\'alerte \nAttention !!'); */
+	/* confirm('Voulez-vous continuer?'); */
+	let signe = prompt("Quel est votre âge ?");
+	
+	if (signe == 25) {
+		console.log("Oh ? moi aussi j'ai le même âge !!!)");
+	}
+
+
+
+</script>
+<H4>Exécution sur événement onClick</H4> 
+<form> 
+<input type="button" name="Bouton1" value="Salut" onClick="saluer()">
+</form>
+<H4>Exécution sur protocole javascript:</H4>
+<A href = "javascript:saluer()">pour saluer</a> 
+</body> 
+</html>

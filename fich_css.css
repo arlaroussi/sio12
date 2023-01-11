@@ -1,0 +1,51 @@
+body {
+    padding-top: 50px;
+}
+
+.form_col {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 3px 0px;
+    width: 200px;
+    min-height: 1px;
+    text-align: right;
+}
+
+input {
+    padding: 2px;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    outline: none; /* Retire les bordures appliquées par certains navigateurs (Chrome notamment) lors du focus des éléments <input> */
+}
+
+input:focus {
+    border-color: #81F7D8;
+    box-shadow: 0 0 8px #FE2E2E;
+}
+
+.correct {
+    border-color: #2E9AFE;
+}  
+
+.correct:focus {
+    border-color: #D8D8D8;
+    box-shadow: 0 0 8px #2E9AFE;
+}
+
+.incorrect {
+    border-color: #B18904;
+}
+
+.incorrect:focus {
+    border-color: #B18904;
+    box-shadow: 0 0 8px #B18904;
+}
+
+.tooltip {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 2px 4px;
+    border: 1px solid #555;
+    background-color: #CCC;
+    border-radius: 4px;
+}

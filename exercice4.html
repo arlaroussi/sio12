@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Les objets documents</h1>
+<h2>Méthode getElementsByName Method</h2>
+
+<p>Prénom: <input name="prenom" type="text" value="Marie"></p>
+<p>Prénom: <input name="prenom" type="text" value="Anthony"></p>
+
+<p>The tag name of the first element with the name "fname" is:</p>
+
+<p id="demo"></p>
+
+<script>
+let elements = document.getElementsByName("prenom");
+document.getElementById("demo").innerHTML = elements[0].tagName;
+</script>
+
+</body>
+</html>

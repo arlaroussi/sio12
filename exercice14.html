@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+   </head>
+<body>
+    <div>
+        <p id="myP">IUT Sénart : <a></a></p>
+    </div>
+    <script>
+       var newLink = document.createElement('a');
+       newLink.id = 'iutsf';
+       newLink.href = 'https://www.iutsf.u-pec.fr/';
+       newLink.title = 'Découvrez IUT Sénart Fontainebleau !';
+       newLink.setAttribute('tabindex', '10');
+       document.getElementById('myP').appendChild(newLink); 
+       //le nouvel élément est le dernier enfant dans le paragraphe avec id 'myP'
+       var newLinkText = document.createTextNode(" IUT Sénart");
+       newLink.appendChild(newLinkText); // ces deux lignes pour ajouter le texte
+    </script>
+</body>
+</html>
+

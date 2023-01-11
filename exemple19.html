@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Javascript</title>
+    </head>
+<body>
+
+<p id="demo">Cliquer pour changer la couleur du paragraphe.</p>
+
+<button onclick="myFunction()">Valider</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+
+  if (x.style.color == "black") {
+    (x.style.color = "red")
+  }
+  else {
+    (x.style.color = "black")
+  }
+}
+</script>
+
+</body>
+</html>

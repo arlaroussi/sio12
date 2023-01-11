@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulaire</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="formulaire.js"></script> 
+    </head>
+
+<body onload="OriginalText()">
+    <form name="formu1" id="formu1" action="test.php">
+        <h1>HOTEL EN FRANCE</h1>
+        <h3>Indiquez vos dates de réservation</h3>
+        <h3>Toute annulation doit se faire 48h avant</h3>
+        <br />
+        <table id="table">
+            <tr>
+                <td class="img"><img src="lit.PNG" width="25px" height="25px" ></td>
+                <td colspan="2" class="police">France</td>
+            </tr>
+            <tr>
+                <td><input type="date" id="arr" placeholder="Arrivée"></td>
+                <td colspan="2"><input type="date" id ="dep" placeholder="Départ" onblur="verifierDate(document.getElementById('dep'), document.getElementById('arr'))"></td>
+            </tr>
+            <tr>
+                <td><label>Adultes</label><input type="text" placeholder="Adultes" id="adulte" class="police"></td>
+                <td><input type="button" id="imgadd" class="but-add" onClick="augmenterVal('adulte')" /></td>
+                <td><input type="button" id="imgmin" class="but-min" onclick="diminuerVal('adulte')"/></td>
+            </tr>
+            <tr>
+                <td><label>Enfants</label><input type="text" placeholder="Enfant" id="enfant" class="police"></td>
+                <td><input type="button" id="imgadd" class="but-add" onClick="augmenterVal('enfant')" /></td>
+                <td><input type="button" id="imgmin" class="but-min" onclick="diminuerVal('enfant')"/></td>
+            </tr>
+            <tr>
+                <td><label>Chambre</label><input type="text" placeholder="Chambre" id="chambre" class="police"></td>
+                <td><input type="button" id="imgadd" class="but-add" onClick="augmenterVal('chambre')" /></td>
+                <td><input type="button" id="imgmin" class="but-min" onclick="diminuerVal('chambre')"/></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="submit" id="submit" class="rechercher" value="Rechercher" onClick="document.forms['formu1'].submit()" /></td>             
+            </tr>
+            <tr>
+                <td colspan="3"><input type="checkbox" id="travail" name="trav" />Je voyage pour le travail</td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

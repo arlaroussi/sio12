@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Objet window</title>
+    </head>
+ 
+<body>
+
+    <form>
+        Entrer un nom<br />
+        <input id="text" />
+        <input type="button" value="Valider" />
+       </form>
+       <h3 id="res"></h3>
+       <script>
+        document.onclick= function(event) {
+        // l'evenement permet de détecter sur quel composant le clic est passé
+        if (event===undefined) event= window.event;
+        var target= 'target' in event? event.target : event.srcElement;
+        
+        document.getElementById("res").innerHTML = "J'ai cliqué sur un élement de type "+target.tagName;
+        };
+       </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulaire</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function afficher() {
+                alert("Bonjour");
+            }
+            function OriginalText() {
+                var nom = "Youcef";
+                var v =document.getElementById("nom").value = nom;
+
+            }
+
+            function modifNom() {
+               var v = document.getElementById("nom");
+               v.value = "Meryam";
+            }
+        </script>
+    </head>
+ 
+<body onload="OriginalText()">
+
+    <form>
+
+                <input type="text" placeholder="Enfant" id="nom">
+                <input type="button" id="butadd" class="but-add but-add" onclick="modifNom('Meryam')"/>
+
+    </form>
+
+</body>
+</html>

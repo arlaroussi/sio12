@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+<head>
+<title> Exemple javascript</title>
+<!-- balise de script -->
+</head>
+<body>
+<script language="JavaScript">
+let myObject = {
+	myProperty0 : "value0",
+	myProperty1 : "value1",
+	myProperty2 : "value2",
+
+	myMethod : function(){
+	return this.myProperty0;	
+	}
+};
+
+for(let key in myObject){
+
+console.log(`${key} contains ${myObject[key]}`);
+}
+</script>
+</body>
+</html>

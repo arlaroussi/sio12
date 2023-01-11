@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+   </head>
+
+<body>
+    <form id="formulaire">
+        <h3>Formulaire</h3>
+        <input type="text" placeholder="Entrez un texte" /><br /><br />
+        <input type="submit" value="Submit !" />
+        <input type="reset" value="Reset !" />
+    </form>
+
+    <script>
+        var myForm = document.getElementById('formulaire');
+        myForm.addEventListener('submit', function(e) {
+            alert('Vous avez envoyé le formulaire');
+            e.preventDefault();
+        }, true);
+        myForm.addEventListener('reset', function(e) {
+                alert('Vous avez réinitialisé le formulaire !');
+        }, true);
+    </script>
+</body>
+</html>
+

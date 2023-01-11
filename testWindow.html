@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<SCRIPT>
+    var hauteur=200;   // hauteur de la fenêtre à créer
+    var largeur=500;
+    options="width="+largeur+",height="+hauteur+"toolbar=yes,directories=no,menubar=no,scrollbars=yes,status=yes";
+
+function ouvrirFenetre1() { 
+   fen1 =window.open("" ,"Nfenetre",options);
+   fen1.document.write("Bonjour le monde !<BR>"); 
+}
+
+function fermerFen() {
+   if (! fen1.closed) this.fen1.close();
+}
+</SCRIPT>
+
+</head>
+<body>    
+<form>
+   Voici un exemple d'ouverture de fenetre:<br><br><br>
+   <INPUT type=Button value="Fenetre1" name="Nfenetre" onClick="ouvrirFenetre1();">
+   <INPUT type=Button value="Fermer 1" onClick="fermerFen();">
+</form>
+</body>
+</html>
